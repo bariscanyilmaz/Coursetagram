@@ -1,0 +1,39 @@
+<div class="add-post">
+  <form [formGroup]="postForm" class="add-post-form" (submit)="onSumbit()">
+
+    <div class="question-preview" #questionPreview (click)="openFile()">
+      <mat-card class="example-card" >
+        <img mat-card-image [src]="imageUrl" alt="Photo of a Shiba Inu">
+      </mat-card>
+    </div>
+
+    <div class="example-button-row" #btnUpload >
+      <button mat-fab class="btn-upload" (click)="openFile()" type="button">
+        <mat-icon aria-label="Upload Question">file_upload</mat-icon>
+      </button>
+    </div>
+    <input type="file" id="file" #questionFile formControlName="question" (change)="onFileChange($event)" accept="image/*" >
+    <mat-form-field>
+      <mat-label>Ders</mat-label>
+      <mat-select formControlName="lesson" required>
+        <mat-option *ngFor="let lesson of lessons" [value]="lesson.value">
+          {{lesson.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Konu" formControlName="object" autocomplete="off" required value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Cevap" formControlName="answer" autocomplete="off" required value="">
+    </mat-form-field>
+  </form>
+
+  <div class="actions">
+      <button mat-flat-button color="warn" (click)="save()">Kaydet</button>
+      <button mat-flat-button color="warn" (click)="cancel()">İptal</button>
+  </div>
+
+</div>

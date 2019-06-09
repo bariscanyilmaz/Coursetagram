@@ -1,0 +1,28 @@
+.profile{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.profile-user{
+  flex-grow: 1;
+  min-height: 70px;
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.followers,.follow{
+  flex-grow: 2;
+}
+.user-name{
+  flex-grow: 1;
+}
+
+.profile-tab{
+  flex-grow: 7;
+}

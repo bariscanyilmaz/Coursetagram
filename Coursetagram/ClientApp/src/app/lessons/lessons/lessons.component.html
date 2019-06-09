@@ -1,0 +1,23 @@
+<div class="lessons">
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let lesson of selectedLessons;let i=index">
+      <div class="lesson">
+        <div class="lesson-name">{{lesson.name}}</div>
+
+        <button mat-button (click)="remove(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-form-field>
+    <mat-label>Ders</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option *ngFor="let lesson of lessons" [value]="lesson">
+        {{lesson.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-flat-button color="warn" (click)="add()">Ekle</button>
+</div>

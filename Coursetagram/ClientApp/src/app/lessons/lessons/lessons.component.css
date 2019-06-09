@@ -1,0 +1,16 @@
+.lessons{
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.lesson{
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+

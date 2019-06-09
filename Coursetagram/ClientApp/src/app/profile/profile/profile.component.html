@@ -1,0 +1,37 @@
+<div class="profile">
+  <div class="profile-user">
+    <div class="user-name">1bariscanyilmaz</div>
+    <div class="followers">Takipçi <span>350</span></div>
+    <div class="follow">Takip Edilen <span> 120</span></div>
+  </div>
+
+  <mat-tab-group class="profile-tab" mat-align-tabs="center">
+    <mat-tab>
+      <ng-template matTabLabel>
+        <span matBadge="{{questions.length}}" matBadgeOverlap="false">Sorular</span>
+      </ng-template>
+      <app-question [questions]="questions">
+      </app-question>
+    </mat-tab>
+    <mat-tab label="Dersler">
+      <app-lessons></app-lessons>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>settings</mat-icon>
+        Ayarlar
+      </ng-template>
+      <app-settings>
+      </app-settings>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>bookmark</mat-icon>
+        Kaydedilenler
+      </ng-template>
+      <app-question [questions]="questions">
+      </app-question>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>
