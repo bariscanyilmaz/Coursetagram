@@ -1,6 +1,6 @@
 <div class="questions">
   <div class="question" *ngFor="let question of questions">
-    <mat-card >
+    <mat-card (click)="detail(question.id)">
       <img mat-card-md-image [src]="question.imagePath" [alt]="question.id">
     </mat-card>
   </div>
