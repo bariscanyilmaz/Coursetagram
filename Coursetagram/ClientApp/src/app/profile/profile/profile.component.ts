@@ -10,7 +10,7 @@ import { MatDialog } from '@angular/material';
 })
 export class ProfileComponent implements OnInit {
 
-  questions: IQuestionModel[]
+  questions: IQuestionModel[];
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
