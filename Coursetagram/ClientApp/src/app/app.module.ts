@@ -36,7 +36,8 @@ import { AuthModule } from './auth/auth.module';
     ExploreModule,
     PostModule,
     AuthModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
