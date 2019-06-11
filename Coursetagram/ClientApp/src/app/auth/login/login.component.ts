@@ -9,7 +9,8 @@ export class LoginComponent implements OnInit {
 
   email:string='';
   password:string='';
-
+  isError:boolean=false;
+  resultMessage:string='';
   constructor() { }
 
   ngOnInit() {
