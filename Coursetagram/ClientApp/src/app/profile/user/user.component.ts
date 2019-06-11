@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IQuestionModel } from 'src/app/models/question.model';
+import { MatDialog } from '@angular/material';
+import { FollowDialogComponent } from 'src/app/follow/follow-dialog/follow-dialog.component';
 
 @Component({
   selector: 'app-user',
@@ -7,8 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  questions: IQuestionModel[]
-  constructor() { }
+  questions: IQuestionModel[];
+  isFollow:boolean=false;
+  
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
     this.questions = [{
@@ -29,6 +34,29 @@ export class UserComponent implements OnInit {
     }, {
       id: 0, answer: 'A', imagePath: 'http://lorempixel.com/output/food-q-c-400-400-5.jpg', lecture: 'Matematik', object: 'Polinom'
     }];
+  }
+  
+  follow(){
+    this.isFollow=!this.isFollow;
+  }
+
+  showFollow(){
+    
+    const dialogRef = this.dialog.open(FollowDialogComponent, {
+      width: '250px',
+      height:'auto'
+    });
+
+  }
+
+  
+  showFollower(){
+    
+    const dialogRef = this.dialog.open(FollowDialogComponent, {
+      width: '250px',
+      height:'auto'
+    });
+
   }
 
 }

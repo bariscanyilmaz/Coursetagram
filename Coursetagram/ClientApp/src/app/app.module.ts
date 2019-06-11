@@ -15,6 +15,7 @@ import { ProfileModule } from './profile/profile.module';
 import { PostModule } from './post/post.module';
 import { ExploreModule } from './explore/explore.module';
 import { AuthModule } from './auth/auth.module';
+import { FollowModule } from './follow/follow.module';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { AuthModule } from './auth/auth.module';
     PostModule,
     AuthModule,
     ReactiveFormsModule,
-    
+    FollowModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
