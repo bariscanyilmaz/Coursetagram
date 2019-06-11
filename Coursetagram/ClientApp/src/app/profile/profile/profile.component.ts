@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IQuestionModel } from 'src/app/models/question.model';
+import { FollowDialogComponent } from 'src/app/follow/follow-dialog/follow-dialog.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +11,7 @@ import { IQuestionModel } from 'src/app/models/question.model';
 export class ProfileComponent implements OnInit {
 
   questions: IQuestionModel[]
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
     this.questions = [{
@@ -30,6 +32,25 @@ export class ProfileComponent implements OnInit {
     }, {
       id: 0, answer: 'A', imagePath: 'http://lorempixel.com/output/food-q-c-400-400-5.jpg', lecture: 'Matematik', object: 'Polinom'
     }];
+  }
+
+  showFollow(){
+    
+    const dialogRef = this.dialog.open(FollowDialogComponent, {
+      width: '250px',
+      height:'auto'
+    });
+
+  }
+
+  
+  showFollower(){
+    
+    const dialogRef = this.dialog.open(FollowDialogComponent, {
+      width: '250px',
+      height:'auto'
+    });
+
   }
 
 }

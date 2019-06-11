@@ -1,0 +1,29 @@
+
+.post{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 400px;
+  }
+  .example-card {
+    max-width: 400px;
+  }
+
+  .actions{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "like reply . bookmark"
+  }
+  
+  .like{
+    grid-area: like;
+  }
+
+  .reply{
+    grid-area: reply;
+  }
+
+  .bookmark{
+    grid-area: bookmark;
+  }

@@ -26,4 +26,5 @@ export class LessonsComponent implements OnInit {
     this.selectedLessons.splice(i,1);
   }
 
+  
 }

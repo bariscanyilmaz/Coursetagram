@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailPostComponent implements OnInit {
 
+  isLike:boolean=false;
+  isBookmark:boolean=false;
+  answer:string='A';
+  lesson:string='Matematik';
+  object:string='Polinom';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  like(){
+    this.isLike=!this.isLike;
+  }
+
+  bookmark(){
+    this.isBookmark=!this.isBookmark;
   }
 
 }

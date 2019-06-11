@@ -12,6 +12,7 @@ import { MaterialDesignModule } from '../material-design/material-design.module'
     FormsModule,
     MaterialDesignModule
   ],
-  declarations: [AddPostComponent, DetailPostComponent]
+  declarations: [AddPostComponent, DetailPostComponent],
+  exports:[AddPostComponent,DetailPostComponent]
 })
 export class PostModule { }

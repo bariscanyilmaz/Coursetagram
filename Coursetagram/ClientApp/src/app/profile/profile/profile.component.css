@@ -10,11 +10,16 @@
   flex-grow: 1;
   min-height: 70px;
   margin: 0 auto;
-  width: 400px;
+  width: 600px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
+
+.profile-user *{
+  max-width: 140px;
+}
+
 
 .followers,.follow{
   flex-grow: 2;
