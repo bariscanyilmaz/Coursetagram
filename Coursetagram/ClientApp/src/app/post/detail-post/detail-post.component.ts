@@ -26,4 +26,9 @@ export class DetailPostComponent implements OnInit {
     this.isBookmark=!this.isBookmark;
   }
 
+  reply(){
+
+  }
+
+  
 }

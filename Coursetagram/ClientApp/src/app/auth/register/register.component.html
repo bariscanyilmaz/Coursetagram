@@ -2,7 +2,7 @@
   <div class="register-form-field">
     <mat-form-field appearance="outline">
       <mat-label>Name Surname</mat-label>
-      <input required [(ngModel)]="username" matInput placeholder="Placeholder">
+      <input required [(ngModel)]="username" matInput placeholder="Placeholder" required>
       <mat-icon matSuffix>person</mat-icon>
     </mat-form-field>
 
@@ -10,7 +10,7 @@
   <div class="register-form-field">
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
-      <input required type="email" [(ngModel)]="email" matInput placeholder="Placeholder">
+      <input required type="email" [(ngModel)]="email" matInput placeholder="Placeholder" required>
       <mat-icon matSuffix>email</mat-icon>
     </mat-form-field>
 
@@ -18,7 +18,7 @@
   <div class="register-form-field">
     <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input required type="password" [(ngModel)]="password" matInput placeholder="Placeholder">
+      <input required type="password" [(ngModel)]="password" matInput placeholder="Placeholder" required>
       <mat-icon matSuffix>lock</mat-icon>
     </mat-form-field>
   </div>

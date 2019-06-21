@@ -2,7 +2,7 @@
   <div class="login-form-field">
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
-      <input required type="email" [(ngModel)]="email" matInput placeholder="Email">
+      <input required type="email" [(ngModel)]="email" matInput placeholder="Email" required>
       <mat-icon matSuffix>email</mat-icon>
 
       <mat-hint *ngIf="isError">{{resultMessage}}</mat-hint>
@@ -12,7 +12,7 @@
   <div class="login-form-field">
     <mat-form-field appearance="outline" >
       <mat-label>Password</mat-label>
-      <input required type="password"  [(ngModel)]="password" matInput placeholder="Password">
+      <input required type="password"  [(ngModel)]="password" matInput placeholder="Password" required>
       <mat-icon matSuffix>lock</mat-icon>
     </mat-form-field>
 
