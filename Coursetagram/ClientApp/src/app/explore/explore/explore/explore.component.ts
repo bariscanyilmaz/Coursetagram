@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IQuestionModel } from 'src/app/models/question.model';
+import { Question } from 'src/app/models/question.model';
 
 @Component({
   selector: 'app-explore',
@@ -8,7 +8,7 @@ import { IQuestionModel } from 'src/app/models/question.model';
 })
 export class ExploreComponent implements OnInit {
 
-  questions: IQuestionModel[];
+  questions: Question[];
   constructor() { }
 
   ngOnInit() {

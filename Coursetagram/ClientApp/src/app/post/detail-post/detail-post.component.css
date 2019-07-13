@@ -27,3 +27,12 @@
   .bookmark{
     grid-area: bookmark;
   }
+
+  #answer{
+    display: none;
+  }
+
+  .answers{
+    width: 100%;
+    height: auto;
+  }

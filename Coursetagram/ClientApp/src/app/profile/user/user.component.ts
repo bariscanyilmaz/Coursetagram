@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IQuestionModel } from 'src/app/models/question.model';
+import { Question } from 'src/app/models/question.model';
 import { MatDialog } from '@angular/material';
 import { FollowDialogComponent } from 'src/app/follow/follow-dialog/follow-dialog.component';
 
@@ -10,7 +10,7 @@ import { FollowDialogComponent } from 'src/app/follow/follow-dialog/follow-dialo
 })
 export class UserComponent implements OnInit {
 
-  questions: IQuestionModel[];
+  questions: Question[];
   isFollow:boolean=false;
   
   constructor(public dialog: MatDialog) { }

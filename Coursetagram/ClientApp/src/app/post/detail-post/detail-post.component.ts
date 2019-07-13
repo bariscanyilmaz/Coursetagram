@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Answer } from 'src/app/models/answer.model';
 
 @Component({
   selector: 'app-detail-post',
@@ -12,10 +13,14 @@ export class DetailPostComponent implements OnInit {
   answer:string='A';
   lesson:string='Matematik';
   object:string='Polinom';
+  answers:Answer[]=[];
+
+  @ViewChild('answerFile') answerFile:ElementRef<HTMLInputElement>;
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
   like(){
@@ -27,8 +32,29 @@ export class DetailPostComponent implements OnInit {
   }
 
   reply(){
-
+    this.answerFile.nativeElement.click();
   }
 
+  onFileChange(event){
+    if (event.target.files[0]) {
+      let selectedFile = <File>event.target.files[0];
+      const reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0])
+      reader.onload = (_event) => {
+        let ans=new Answer();
+        ans.imagePath =reader.result;
+        this.answers.push(ans);
+        
+      }
+
+      
+
+    }
+  }
+
+  removeReply(answer:Answer){
+    const indx= this.answers.indexOf(answer);
+    this.answers.splice(indx,1);
+  }
   
 }

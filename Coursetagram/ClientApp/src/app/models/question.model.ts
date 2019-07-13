@@ -1,4 +1,4 @@
-export interface IQuestionModel {
+export class Question {
   id:number;
   imagePath:String;
   object:String;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IQuestionModel } from 'src/app/models/question.model';
+import { Question } from 'src/app/models/question.model';
 import { FollowDialogComponent } from 'src/app/follow/follow-dialog/follow-dialog.component';
 import { MatDialog } from '@angular/material';
 
@@ -10,7 +10,7 @@ import { MatDialog } from '@angular/material';
 })
 export class ProfileComponent implements OnInit {
 
-  questions: IQuestionModel[];
+  questions: Question[];
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {

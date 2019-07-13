@@ -1,0 +1,14 @@
+.answer-cover{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .answer-image{
+    max-width: 290px;
+    max-height: 200px;
+    object-fit: cover;
+  }

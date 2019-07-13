@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IQuestionModel } from 'src/app/models/question.model';
+import { Question } from 'src/app/models/question.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class QuestionComponent implements OnInit {
 
-  @Input() questions:IQuestionModel[];
+  @Input() questions:Question[];
 
   constructor(private router:Router) {
 

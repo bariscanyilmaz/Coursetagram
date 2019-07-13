@@ -15,6 +15,8 @@
           <mat-icon>favorite_border</mat-icon>
         </ng-template>
       </button>
+      <input type="file" id="answer" #answerFile (change)="onFileChange($event)" accept="image/*">
+
       <button mat-button (click)="reply()" class="reply">
         <mat-icon>add_comment</mat-icon>
       </button>
@@ -25,5 +27,8 @@
         </ng-template>
       </button>
     </mat-card-actions>
+    <mat-card-footer class="answers" *ngIf="answers.length>0">
+        <app-reply-post (removeReply)="removeReply($event)" [answer]="answer" *ngFor="let answer of answers"></app-reply-post>
+    </mat-card-footer>
   </mat-card>
 </div>
