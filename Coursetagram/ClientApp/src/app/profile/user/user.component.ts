@@ -12,7 +12,9 @@ export class UserComponent implements OnInit {
 
   questions: Question[];
   isFollow:boolean=false;
+  sentenceofFollow='Follow';
   
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {

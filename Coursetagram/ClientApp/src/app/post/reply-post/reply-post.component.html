@@ -1,6 +1,9 @@
 <div class="answer-cover">
-  <img  [src]="answer.imagePath" class="answer-image" alt="answer.imagePath">
-  <button mat-button (click)="remove()" class="remove-reply">
-    <mat-icon>delete</mat-icon>
-  </button>
+  <p class="answer-owner" [routerLink]='["/u/1bariscanyilmaz"]'>1bariscanyilmaz</p>
+  <div class="answer-container">
+    <img [src]="answer.imagePath" class="answer-image" alt="answer.imagePath">
+    <button mat-button (click)="remove()" class="remove-reply">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
 </div>

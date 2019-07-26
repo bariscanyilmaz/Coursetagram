@@ -5,13 +5,15 @@ import { DetailPostComponent } from './detail-post/detail-post.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialDesignModule } from '../material-design/material-design.module';
 import { ReplyPostComponent } from './reply-post/reply-post.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    MaterialDesignModule
+    MaterialDesignModule,
+    RouterModule 
   ],
   declarations: [AddPostComponent, DetailPostComponent, ReplyPostComponent],
   exports:[AddPostComponent,DetailPostComponent]

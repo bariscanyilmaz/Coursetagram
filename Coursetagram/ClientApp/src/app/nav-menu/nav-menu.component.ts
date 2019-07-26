@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProfileService } from '../services/profile.service';
 import { IUserModel } from '../models/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-menu',
@@ -13,7 +14,7 @@ export class NavMenuComponent {
    *
    */
 
-  constructor(private profileService:ProfileService) {
+  constructor(private profileService:ProfileService,private router:Router) {
 
   }
 
@@ -47,6 +48,10 @@ export class NavMenuComponent {
   clear(){
     this.value='';
     this.users=[];
+  }
+
+  logout(){
+    this.router.navigate(['/login']);
   }
 
 }
